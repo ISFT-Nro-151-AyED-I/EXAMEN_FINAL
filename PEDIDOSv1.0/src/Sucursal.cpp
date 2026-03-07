@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include "Sucursal.hpp"
-#include "Empleado.hpp"
+#include "../include/Sucursal.hpp"
+#include "../include/Empleado.hpp"
 
 using namespace Pedidos;
 

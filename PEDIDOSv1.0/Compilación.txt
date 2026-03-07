@@ -1,0 +1,54 @@
+🛠️ COMPILACIÓN SISTEMA DE PEDIDOS 🛠️
+=====================================
+
+📁 ESTRUCTURA DE DIRECTORIOS:
+proyecto/
+├── 📁 src/                 -> 📄 Archivos .cpp principales
+├── 📁 include/             -> 🔖 Archivos .hpp de cabeceras
+├── 📁 bin/                 -> 🚀 Ejecutables (se creará)
+└── 📄 compilacion.txt     -> 📋 Este archivo
+
+🚀 COMANDOS DE COMPILACIÓN:
+
+1. 🛒 PEDIDO.EXE (Versión Comercial)
+   Compilar desde la raíz del proyecto:
+   
+   g++ -std=c++11 -I./include ./src/Main.cpp ./src/Empresa.cpp ./src/Sucursal.cpp ./src/Empleado.cpp ./src/VendedorParticular.cpp ./src/VendedorProfesional.cpp ./src/VendedorEmpresa.cpp -o ./bin/Pedidos.exe
+
+2. 🔧 PRUEBA.EXE (Versión Técnica)
+   Compilar desde la raíz del proyecto:
+   
+   g++ -std=c++11 -I./include ./src/MainTecnico.cpp ./src/Empresa.cpp ./src/Sucursal.cpp ./src/Empleado.cpp ./src/VendedorParticular.cpp ./src/VendedorProfesional.cpp ./src/VendedorEmpresa.cpp -o ./bin/Pruebas.exe
+
+🎯 COMPILAR AMBOS DE UNA VEZ:
+
+g++ -std=c++11 -I./include ./src/Main.cpp ./src/Empresa.cpp ./src/Sucursal.cpp ./src/Empleado.cpp ./src/VendedorParticular.cpp ./src/VendedorProfesional.cpp ./src/VendedorEmpresa.cpp -o ./bin/Pedido.exe && g++ -std=c++11 -I./include ./src/MainTecnico.cpp ./src/Empresa.cpp ./src/Sucursal.cpp ./src/Empleado.cpp ./src/VendedorParticular.cpp ./src/VendedorProfesional.cpp ./src/VendedorEmpresa.cpp -o ./bin/Prueba.exe
+
+📝 NOTAS IMPORTANTES:
+
+• 🏗️  Crear la carpeta "bin/" primero si no existe:
+    mkdir bin
+
+• 📍 Ubicarse en la raíz del proyecto antes de compilar:
+    cd /ruta/a/proyecto
+
+• 🔄 Ruta relativa: "./" significa "directorio actual"
+• 🔼 Ruta superior: "../" significa "directorio padre"
+
+✅ EJECUCIÓN DESPUÉS DE COMPILAR:
+
+  • ./bin/Pedido.exe    🚀 (versión comercial)
+  • ./bin/Prueba.exe    🔍 (versión técnica)
+
+🧹 LIMPIAR EJECUTABLES:
+
+  • Windows: del bin\*.exe
+  • Linux/Mac: rm bin/*
+
+⚡ COMPILACIÓN RÁPIDA (si todos los .cpp están en src/):
+
+for archivo in Main MainTecnico; do
+    g++ -std=c++11 -I./include ./src/$archivo.cpp ./src/*.cpp -o ./bin/$archivo.exe 2>/dev/null || g++ -std=c++11 -I./include ./src/$archivo.cpp ./src/Empresa.cpp ./src/Sucursal.cpp ./src/Empleado.cpp ./src/VendedorParticular.cpp ./src/VendedorProfesional.cpp ./src/VendedorEmpresa.cpp -o ./bin/$archivo.exe
+done
+
+🎉 ¡COMPILACIÓN EXITOSA! 🎉

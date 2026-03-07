@@ -12,7 +12,7 @@ namespace Pedidos
                 private:
                     std::string nombre;
                     std::string direccion;
-                    Empleado* vendedores[10];  // Array fijo de 10 punteros a Empleado
+                    Empleado* vendedores[10];  // Array fijo de 10 punteros a Empleado.
                     int cantidadVendedores;
                     static const int MAX_VENDEDORES = 10;
 

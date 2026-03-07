@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "VendedorProfesional.hpp"
+#include "../include/VendedorProfesional.hpp"
 
 using namespace Pedidos;
 

@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
 
-#include "Empresa.hpp"
-#include "Sucursal.hpp"
+#include "../include/Empresa.hpp"
+#include "../include/Sucursal.hpp"
 
 using namespace Pedidos;
 
 // Constructor.
 Empresa::Empresa(const std::string& nombre) 
-        : nombre(nombre), cantidadSucursales(0), capacidadSucursales(5) 
+        : nombre(nombre), cantidadSucursales(0), capacidadSucursales(5)
     {
         sucursales = new Sucursal*[capacidadSucursales];
 
